@@ -35,7 +35,8 @@ resource "aws_iam_role_policy" "ecsTaskExecutionPolicy" {
                 "ssmmessages:CreateDataChannel",
                 "ssmmessages:OpenDataChannel",
                 "ssmmessages:OpenControlChannel",
-                "ssmmessages:CreateControlChannel"
+                "ssmmessages:CreateControlChannel",
+                "ssm:GetParameters"
             ],
             "Resource": "*"
         }
