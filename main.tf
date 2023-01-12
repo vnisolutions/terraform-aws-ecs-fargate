@@ -115,7 +115,7 @@ resource "aws_ecs_service" "aws-ecs-service" {
 
   network_configuration {
     subnets          = var.subnet_ids
-    assign_public_ip = false
+    assign_public_ip = var.assign_public_ip
     security_groups  = aws_security_group.sg-fargate[*].id
   }
 

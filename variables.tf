@@ -48,6 +48,12 @@ variable "parameter" {
   default     = false
 }
 
+variable "assign_public_ip" {
+  description = "Name to be used on all the resources as identifier"
+  type        = bool
+  default     = false
+}
+
 variable "parameter_path" {
   description = "Name to be used on all the resources as identifier"
   type        = string
