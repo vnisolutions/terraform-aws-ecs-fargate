@@ -22,6 +22,12 @@ variable "service_name" {
   type        = string
 }
 
+variable "container_port" {
+  description = "Name to be used on all the resources as identifier"
+  type        = string
+  default     = "80"
+}
+
 variable "target_group_arn" {
   description = "Name to be used on all the resources as identifier"
   type        = list(string)

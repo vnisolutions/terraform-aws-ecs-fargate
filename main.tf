@@ -35,8 +35,8 @@ data "template_file" "task_definition_parameter" {
           "essential": true,
           "portMappings": [
                   {
-                    "containerPort": 80, 
-                    "hostPort": 80
+                    "containerPort": ${var.container_port}, 
+                    "hostPort": ${var.container_port}
             }
           ],
           "memory": ${var.ecs_task_mem},
@@ -68,8 +68,8 @@ data "template_file" "task_definition" {
           "essential": true,
           "portMappings": [
                   {
-                    "containerPort": 80, 
-                    "hostPort": 80
+                    "containerPort": ${var.container_port}, 
+                    "hostPort": ${var.container_port}
             }
           ],
           "memory": ${var.ecs_task_mem},
@@ -122,7 +122,7 @@ resource "aws_ecs_service" "aws-ecs-service" {
   load_balancer {
     target_group_arn = var.target_group_arn[0]
     container_name   = "${var.project_name}-container"
-    container_port   = 80
+    container_port   = var.container_port
   }
 }
 
