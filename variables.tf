@@ -87,3 +87,27 @@ variable "retention_in_days" {
   type        = number
   default     = 7
 }
+
+variable "max_scale" {
+  description = "Name to be used on all the resources as identifier"
+  type        = number
+  default     = 8
+}
+
+variable "min_scale" {
+  description = "Name to be used on all the resources as identifier"
+  type        = number
+  default     = 2
+}
+
+variable "target_scale_mem" {
+  description = "Name to be used on all the resources as identifier"
+  type        = number
+  default     = 65
+}
+
+variable "target_scale_cpu" {
+  description = "Name to be used on all the resources as identifier"
+  type        = number
+  default     = 65
+}
